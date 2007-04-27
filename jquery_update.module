@@ -49,6 +49,14 @@ function jquery_update_requirements($phase) {
           'value' => $t('Copy jquery.js'),
         );
       }
+      elseif ($phase == 'runtime') {
+        $requirements['jquery'] = array(
+          'title' => $t('JQuery Update appears to be installed correctly'),
+          'description' => $t('The jquery.js file in %mod has been copied to %core.', array('%core' => 'misc/jqeury.js', '%mod' => $path)),
+          'severity' => REQUIREMENT_OK,
+          'value' => $t('Okey dokey.'),
+        );
+      }
   }
   return $requirements;
 }
