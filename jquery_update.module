@@ -36,7 +36,7 @@ function jquery_update_requirements($phase) {
       if (file_exists($path) && file_exists('misc/jquery.js') && md5_file($path) != md5_file('misc/jquery.js')) {
         $requirements['jquery'] = array(
           'title' => $t('Please copy JQuery'),
-          'description' => $t('In order for the JQuery Update module to work correctly, please copy the file at %mod and use it to replace %core.', array('%core' => 'misc/jqeury.js', '%mod' => $path)),
+          'description' => $t('In order for the JQuery Update module to work correctly, please copy the file at %mod and use it to replace %core.', array('%core' => 'misc/jquery.js', '%mod' => $path)),
           'severity' => $phase == 'install' ? REQUIREMENT_WARNING : REQUIREMENT_ERROR,
           'value' => $t('Copy jquery.js'),
         );
@@ -44,7 +44,7 @@ function jquery_update_requirements($phase) {
       elseif (!file_exists($path)) {
         $requirements['jquery'] = array(
           'title' => $t('jquery.js no longer exists in the JQuery Update directory'),
-          'description' => $t('You probably <em>moved</em> rather than <em>copied</em> the jquery.js file from %mod to %core. You should leave a copy of this file in the module directory so that will not lose this file when you upgrade to another revision of Drupal.', array('%core' => 'misc/jqeury.js', '%mod' => $path)),
+          'description' => $t('You probably <em>moved</em> rather than <em>copied</em> the jquery.js file from %mod to %core. You should leave a copy of this file in the module directory so that will not lose this file when you upgrade to another revision of Drupal.', array('%core' => 'misc/jquery.js', '%mod' => $path)),
           'severity' => $phase == 'install' ? REQUIREMENT_WARNING : REQUIREMENT_ERROR,
           'value' => $t('Copy jquery.js'),
         );
@@ -53,7 +53,7 @@ function jquery_update_requirements($phase) {
         $requirements['jquery'] = array(
           'title' => $t('JQuery Update'),
           'description' => t('The current installed version of JQuery is !version', 
-            array('%core' => 'misc/jqeury.js', '%mod' => $path, '!version' => '<strong><script>document.write($().jquery);</script><noscript>javascript not enabled</noscript></strong>')),
+            array('%core' => 'misc/jquery.js', '%mod' => $path, '!version' => '<strong><script>document.write($().jquery);</script><noscript>javascript not enabled</noscript></strong>')),
           'severity' => REQUIREMENT_OK,
           'value' => $t('Installed correctly'),
         );
