@@ -3,11 +3,9 @@
 
 /**
  * @abstract
- * This Drupal module helps with updating core JQuery
+ * This Drupal module helps with updating core JQuery.
  * Drupal 5 comes with JQuery 1.0.1
- * This module helps you to install a later version
- * 
- * @todo - js to fix collapse behavior?
+ * This module helps you to install a later version.
  */
 
 /**
@@ -17,8 +15,7 @@ function jquery_update_menu($may_cache) {
   $items = array();
   if (!$may_cache) {
     $path = drupal_get_path('module', 'jquery_update');
-    drupal_add_js($path .'/compat-1.0.js');
-    drupal_add_js($path .'/collapse-fix.js', 'theme');
+    drupal_add_js($path .'/compat.js');
   }
   return $items;
 }
@@ -32,7 +29,7 @@ function jquery_update_requirements($phase) {
   switch ($phase) {
     case 'install' :
     case 'runtime' :
-      $path = drupal_get_path('module', 'jquery_update') .'/jquery.js';
+      $path = drupal_get_path('module', 'jquery_update') .'/misc/jquery.js';
       if (file_exists($path) && file_exists('misc/jquery.js') && md5_file($path) != md5_file('misc/jquery.js')) {
         $requirements['jquery'] = array(
           'title' => $t('Please copy JQuery'),
