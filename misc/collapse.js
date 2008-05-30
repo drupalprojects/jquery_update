@@ -72,6 +72,8 @@ if (Drupal.jsEnabled) {
         }
         return false;
       })).after($('<div class="fieldset-wrapper"></div>').append(fieldset.children(':not(legend)')));
+      fieldset.filter('.collapsed').children('.fieldset-wrapper')
+        .css({height: 'auto', display: 'inline'});
     });
   });
 }
