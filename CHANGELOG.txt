@@ -6,6 +6,10 @@ jQuery Update x.x-x.x, xxxx-xx-xx
 
 jQuery Update 5.x-2.x, xxxx-xx-xx
 ---------------------------------
+
+
+jQuery Update 5.x-2.0-RC-1, 2008-06-07
+--------------------------------------
 #156221 by WorldFallz, katbailey, sun, et al: Upgraded to jQuery 1.2.6.
 
 
