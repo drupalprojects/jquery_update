@@ -2,7 +2,7 @@
 // $Id$
 
 /**
- * @abstract
+ * @file
  * This Drupal module helps with updating core jQuery.
  * Drupal 5.x is shipped with jQuery 1.0.1.
  * This module helps you to install a later version.
