@@ -6,6 +6,11 @@ jQuery Update x.x-x.x, xxxx-xx-xx
 
 jQuery Update 5.x-2.x, xxxx-xx-xx
 ---------------------------------
+
+
+jQuery Update 5.x-2.0, 2008-07-16
+---------------------------------
+#156221 by mfer: Added jQuery 1.2.6 compatible replacement for farbtastic.js.
 by sun: Code clean-up.
 
 
