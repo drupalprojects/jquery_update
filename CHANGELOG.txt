@@ -6,6 +6,7 @@ jQuery Update x.x-x.x, xxxx-xx-xx
 
 jQuery Update 5.x-2.x, xxxx-xx-xx
 ---------------------------------
+#227687 by sun: Fixed improperly capitalized package name.
 
 
 jQuery Update 5.x-2.0, 2008-07-16
