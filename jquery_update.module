@@ -19,9 +19,6 @@ function jquery_update_get_replacements() {
     'module' => array(
       'misc/farbtastic/farbtastic.js' => 'farbtastic.js',
     ),
-    'core' => array(
-      'misc/tabledrag.js' => 'tabledrag.js',
-    ),
   );
 }
 
