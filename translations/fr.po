@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Drupal 6.x\n"
 "POT-Creation-Date: 2008-05-29 17:43+0900\n"
-"PO-Revision-Date: 2009-03-23 09:33+0100\n"
-"Last-Translator: Brice Favre <bfavre@sqli.com>\n"
+"PO-Revision-Date: 2009-04-01 10:31+0100\n"
+"Last-Translator: Sylvain Moreau <sylvain.moreau@ows.fr>\n"
 "Language-Team: DRUPAL*DRUPAL <hixarg+0829@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -22,15 +22,15 @@ msgstr ""
 #: modules/jquery_update/jquery_update.info:0
 #: modules/jquery_update/jquery_update.install:18
 msgid "jQuery Update"
-msgstr "Mise à jour Jquery"
+msgstr "jQuery Update"
 
 #: modules/jquery_update/jquery_update.info:0
 msgid "Updates Drupal to use the latest version of jQuery."
-msgstr "Mettez à jour Drupal pour utiliser la dernier version de jquery."
+msgstr "Met à jour Drupal pour utiliser la dernière version de jQuery."
 
 #: modules/jquery_update/jquery_update.info:0
 msgid "User Interface"
-msgstr "Interface utilisateur"
+msgstr "Interface Utilisateur"
 
 #: modules/jquery_update/jquery_update.module:0
 msgid "jquery_update"
