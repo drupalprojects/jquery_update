@@ -1,4 +1,3 @@
-// $Id$
 // UPGRADE: The following attribute helpers should now be used as:
 // .attr("title") or .attr("title","new title")
 jQuery.each(["id","title","name","href","src","rel"], function(i,n){

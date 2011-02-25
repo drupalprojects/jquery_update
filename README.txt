@@ -1,4 +1,3 @@
-/* $Id$ */
 
 This module facilitates the upgrade of jQuery in Drupal 5.  jQuery 1.0.1 is
 included with Drupal 5, however it is not very well supported in the jQuery
