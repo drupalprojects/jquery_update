@@ -1,4 +1,3 @@
-// $Id$
 // redefining toggleFieldset for compatibility with later versions of JQuery
 Drupal.toggleFieldset = function(fieldset) {
   if ($(fieldset).is('.collapsed')) {
