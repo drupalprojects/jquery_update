@@ -71,9 +71,9 @@ function jquery_update_library_alter(&$libraries, $module) {
   jquery_update_jqueryui_replace($libraries, $cdn, $path, $min);
 
   // Replace the jQuery Cookie plugin.
-  $libraries['cookie']['js']['misc/jquery.cookie.js']['data'] = $path . '/replace/ui/external/jquery.cookie.js';
+  $libraries['jquery.cookie']['js']['misc/jquery.cookie.js']['data'] = $path . '/replace/ui/external/jquery.cookie.js';
   // Noting the version based on git commit as no version number is available.
-  $libraries['cookie']['version'] = '67fb34f6a866c40d0570';
+  $libraries['jquery.cookie']['version'] = '67fb34f6a866c40d0570';
 
   // Replace jQuery Form plugin.
   $libraries['jquery.form']['js']['misc/jquery.form.js']['data'] = $path . '/replace/misc/jquery.form.js';
