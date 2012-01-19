@@ -12,19 +12,7 @@
  */
 function jquery_update_jquery_update_alter(&$javascript) {
   $path = drupal_get_path('module', 'jquery_update') . '/replace/';
-  $scripts = array(
-    'module' => array(
-      'misc/farbtastic/farbtastic.js' => 'farbtastic.js',
-      'misc/teaser.js' => 'teaser.js',
-      'misc/jquery.form.js' => 'jquery.form.js',
-      'misc/ahah.js' => 'ahah.js',
-      // Certain versions of Views re-add tabledrag.js as $type 'module'.
-      'misc/tabledrag.js' => 'tabledrag.js',
-    ),
-    'core' => array(
-      'misc/tabledrag.js' => 'tabledrag.js',
-    ),
-  );
+  $scripts = jquery_update_get_replacements();
 
   // Replace jquery.js first.
   $jquerypath = jquery_update_jquery_path();
@@ -44,6 +32,25 @@ function jquery_update_jquery_update_alter(&$javascript) {
       }
     }
   }
+}
+
+/**
+ * Array of jQuery files to replace if jQuery is loaded.
+ */
+function jquery_update_get_replacements() {
+  return array(
+    'module' => array(
+      'misc/farbtastic/farbtastic.js' => 'farbtastic.js',
+      'misc/teaser.js' => 'teaser.js',
+      'misc/jquery.form.js' => 'jquery.form.js',
+      'misc/ahah.js' => 'ahah.js',
+      // Certain versions of Views re-add tabledrag.js as $type 'module'.
+      'misc/tabledrag.js' => 'tabledrag.js',
+    ),
+    'core' => array(
+      'misc/tabledrag.js' => 'tabledrag.js',
+    ),
+  );
 }
 
 /**
