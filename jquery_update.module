@@ -96,7 +96,9 @@ function jquery_update_library_alter(&$javascript, $module) {
   jquery_update_jquery_replace($javascript, $cdn, $path, $min, $version);
 
   // Replace jQuery UI with CDN or local files. If from a CDN include all of jQuery UI.
-  jquery_update_jqueryui_replace($javascript, $cdn, $path, $min);
+  if (version_compare($version, '1.6', '>=')) {
+    jquery_update_jqueryui_replace($javascript, $cdn, $path, $min);
+  }
 
   // Replace the jQuery Cookie plugin.
   $javascript['cookie']['js']['misc/jquery.cookie.js']['data'] = $path . '/replace/ui/external/jquery.cookie.js';
