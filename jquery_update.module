@@ -131,7 +131,9 @@ function jquery_update_menu() {
 }
 
 /**
- * Implementation of hook_form_FORM_ID().
+ * Admin settings menu callback.
+ *
+ * @see jquery_update_menu().
  */
 function jquery_update_settings_form() {
   $form['version_options'] = array(
