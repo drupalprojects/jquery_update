@@ -315,7 +315,7 @@ function jquery_update_jqueryui_replace(&$javascript, $cdn, $path, $min) {
     'ui.accordion', 'ui.autocomplete', 'ui.button', 'ui.datepicker',
     'ui.dialog', 'ui.draggable', 'ui.droppable', 'ui.mouse', 'ui.position',
     'ui.progressbar', 'ui.resizable', 'ui.selectable', 'ui.slider',
-    'ui.sortable', 'ui.tabs', 'ui.widget', 'ui.effects.blind', 'ui.effects.bounce',
+    'ui.sortable', 'ui.tabs', 'ui.tooltip', 'ui.widget', 'ui.effects.blind', 'ui.effects.bounce',
     'ui.effects-clip', 'ui.effects-drop', 'ui.effects-explode', 'ui.effects-fade',
     'ui.effects-fold', 'ui.effects-highlight', 'ui.effects-pulsate', 'ui.effects-scale',
     'ui.effects-shake', 'ui.effects-slide', 'ui.effects-transfer',
