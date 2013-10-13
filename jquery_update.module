@@ -313,11 +313,39 @@ function jquery_update_jquery_backup(&$javascript, $path, $min, $version) {
  *   version.
  */
 function jquery_update_jqueryui_replace(&$javascript, $cdn, $path, $min) {
+  // Add new components
+  $javascript['ui.menu'] = array(
+    'title' => 'jQuery UI: Menu',
+    'website' => 'http://jqueryui.com/demos/menu/',
+    'version' => '1.10.2',
+    'js' => array('misc/ui/jquery.ui.menu.min.js' => array()),
+    'css' => array('misc/ui/jquery.ui.menu.css' => array()),
+    'dependencies' => array(array('system', 'ui.widget'), array('system', 'ui.position')),
+  );
+  $javascript['ui.spinner'] = array(
+    'title' => 'jQuery UI: Spinner',
+    'website' => 'http://jqueryui.com/demos/spinner/',
+    'version' => '1.10.2',
+    'js' => array('misc/ui/jquery.ui.spinner.min.js' => array()),
+    'css' => array('misc/ui/jquery.ui.spinner.css' => array()),
+    'dependencies' => array(array('system', 'ui.widget'), array('system', 'ui.button')),
+  );
+  $javascript['ui.tooltip'] = array(
+    'title' => 'jQuery UI: Spinner',
+    'website' => 'http://jqueryui.com/demos/tooltip/',
+    'version' => '1.10.2',
+    'js' => array('misc/ui/jquery.ui.tooltip.min.js' => array()),
+    'css' => array('misc/ui/jquery.ui.tooltip.css' => array()),
+    'dependencies' => array(array('system', 'ui.widget'), array('system', 'ui.position')),
+  );
+
+  // fix dependencies
+  $javascript['ui.autocomplete']['dependencies'][] = array('system', 'ui.menu');
   // Replace all CSS files.
   $names = drupal_map_assoc(array(
-    'ui.accordion', 'ui.autocomplete', 'ui.button', 'ui.datepicker',
-    'ui.dialog', 'ui.progressbar', 'ui.resizable', 'ui.selectable',
-    'ui.slider', 'ui.tabs',
+    'ui.accordion', 'ui.autocomplete', 'ui.button', 'ui.datepicker', 'ui.dialog',
+    'ui.progressbar', 'ui.resizable', 'ui.selectable', 'ui.slider', 'ui.tabs',
+    'ui.menu', 'ui.spinner', 'ui.tooltip',
   ));
   $names['ui'] = 'ui.core';
   $csspath = $path . '/replace/ui/themes/base/' . (($min == '.min') ? 'minified/' : '');
@@ -329,13 +357,12 @@ function jquery_update_jqueryui_replace(&$javascript, $cdn, $path, $min) {
 
   // Replace jQuery UI's JavaScript, beginning by defining the mapping.
   $names = drupal_map_assoc(array(
-    'ui.accordion', 'ui.autocomplete', 'ui.button', 'ui.datepicker',
-    'ui.dialog', 'ui.draggable', 'ui.droppable', 'ui.mouse', 'ui.position',
-    'ui.progressbar', 'ui.resizable', 'ui.selectable', 'ui.slider',
-    'ui.sortable', 'ui.tabs', 'ui.tooltip', 'ui.widget', 'ui.effects.blind', 'ui.effects.bounce',
-    'ui.effects-clip', 'ui.effects-drop', 'ui.effects-explode', 'ui.effects-fade',
-    'ui.effects-fold', 'ui.effects-highlight', 'ui.effects-pulsate', 'ui.effects-scale',
-    'ui.effects-shake', 'ui.effects-slide', 'ui.effects-transfer',
+    'ui.accordion', 'ui.autocomplete', 'ui.button', 'ui.datepicker', 'ui.dialog', 'ui.draggable',
+    'ui.droppable', 'ui.mouse', 'ui.position', 'ui.progressbar', 'ui.resizable', 'ui.selectable',
+    'ui.slider', 'ui.sortable', 'ui.tabs', 'ui.widget', 'ui.spinner', 'ui.menu', 'ui.tooltip',
+    'effects.blind', 'effects.bounce', 'effects.clip', 'effects.drop', 'effects.explode', 'effects.fade',
+    'effects.fold', 'effects.highlight', 'effects.pulsate', 'effects.scale', 'effects.shake', 'effects.slide',
+    'effects.transfer',
   ));
   $names['ui'] = 'ui.core';
   $names['effects'] = 'effects.core';
