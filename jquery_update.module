@@ -76,7 +76,7 @@ function jquery_update_library() {
  */
 function jquery_update_library_alter(&$javascript, $module) {
   $path = drupal_get_path('module', 'jquery_update');
-  $version = variable_get('jquery_update_jquery_version', '1.8');
+  $version = variable_get('jquery_update_jquery_version', '1.9');
 
 
   // Modified System Library.
@@ -173,7 +173,7 @@ function jquery_update_settings_form() {
       '1.8' => '1.8',
       '1.9' => '1.9',
     ),
-    '#default_value' => variable_get('jquery_update_jquery_version', '1.8'),
+    '#default_value' => variable_get('jquery_update_jquery_version', '1.9'),
     '#description' => t('Select which jQuery version to use by default.'),
   );
 
