@@ -443,6 +443,13 @@ function jquery_update_jqueryui_cdn($cdn, &$javascript, $path, $min, $names) {
     'group' => JS_LIBRARY,
     'weight' => -11,
   );
+
+  // The cdn puts jQuery UI core and the jQuery UI Effects library in the same
+  // file, but the latter can normally be used without the former. So we need
+  // to add a dependency to guarantee that code which uses the Effects library
+  // has the file loaded regardless of whether they are also using jQuery UI
+  // core.
+  $javascript['effects']['dependencies'][] = array('system', 'ui');
 }
 
 /**
