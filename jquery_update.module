@@ -365,7 +365,7 @@ function jquery_update_jqueryui_replace(&$javascript, $cdn, $path, $min) {
     'effects.transfer',
   ));
   $names['ui'] = 'ui.core';
-  $names['effects'] = 'effects.core';
+  $names['effects'] = 'ui.effect';
 
   switch ($cdn) {
     case 'google':
