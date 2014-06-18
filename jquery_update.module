@@ -287,19 +287,19 @@ function jquery_update_jquery_replace(&$javascript, $cdn, $path, $min, $version)
   // Check for CDN support.
   switch ($cdn) {
     case 'google':
-      $javascript['jquery']['js']['misc/jquery.js']['data'] = 'https://ajax.googleapis.com/ajax/libs/jquery/' . $trueversion . '/jquery' . $min . '.js';
+      $javascript['jquery']['js']['misc/jquery.js']['data'] = '//ajax.googleapis.com/ajax/libs/jquery/' . $trueversion . '/jquery' . $min . '.js';
       $javascript['jquery']['js']['misc/jquery.js']['type'] = 'external';
       jquery_update_jquery_backup($javascript, $path, $min, $version);
       break;
 
     case 'microsoft':
-      $javascript['jquery']['js']['misc/jquery.js']['data'] = 'http://ajax.aspnetcdn.com/ajax/jQuery/jquery-' . $trueversion . $min . '.js';
+      $javascript['jquery']['js']['misc/jquery.js']['data'] = '//ajax.aspnetcdn.com/ajax/jQuery/jquery-' . $trueversion . $min . '.js';
       $javascript['jquery']['js']['misc/jquery.js']['type'] = 'external';
       jquery_update_jquery_backup($javascript, $path, $min, $version);
       break;
 
     case 'jquery':
-      $javascript['jquery']['js']['misc/jquery.js']['data'] = 'http://code.jquery.com/jquery-' . $trueversion . $min . '.js';
+      $javascript['jquery']['js']['misc/jquery.js']['data'] = '//code.jquery.com/jquery-' . $trueversion . $min . '.js';
       $javascript['jquery']['js']['misc/jquery.js']['type'] = 'external';
       jquery_update_jquery_backup($javascript, $path, $min, $version);
       break;
@@ -404,13 +404,13 @@ function jquery_update_jqueryui_replace(&$javascript, $cdn, $path, $min) {
 
   switch ($cdn) {
     case 'google':
-      $cdn = 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui' . $min . '.js';
+      $cdn = '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui' . $min . '.js';
       jquery_update_jqueryui_cdn($cdn, $javascript, $path, $min, $names);
       jquery_update_jqueryui_backup($javascript, $path, $min);
       break;
 
     case 'microsoft':
-      $cdn = 'http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.2/jquery-ui' . $min . '.js';
+      $cdn = '//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.2/jquery-ui' . $min . '.js';
       jquery_update_jqueryui_cdn($cdn, $javascript, $path, $min, $names);
       jquery_update_jqueryui_backup($javascript, $path, $min);
       break;
