@@ -169,7 +169,7 @@ function jquery_update_settings_form() {
 
   $jquery_migrate_states = array(
     'visible' => array(
-      ':input[name="jquery_update_jquery_migrate_enable"]' => array('checked' => TRUE),
+      ':input[name="jquery_migrate[jquery_update_jquery_migrate_enable]"]' => array('checked' => TRUE),
     ),
   );
   $form['jquery_migrate']['jquery_update_jquery_migrate_cdn'] = array(
