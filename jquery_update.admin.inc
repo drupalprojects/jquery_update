@@ -92,7 +92,7 @@ function jquery_update_settings_form() {
     '#description' => t('You can override the default jQuery version above on each themes settings page. This is useful for administrative based themes.'),
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
-    '#tree' => TRUE,
+    '#tree' => FALSE,
     '#weight' => -2,
     '#group' => 'jquery_update',
   );
@@ -108,7 +108,7 @@ function jquery_update_settings_form() {
     '#title' => t('Performance'),
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
-    '#tree' => TRUE,
+    '#tree' => FALSE,
     '#weight' => -1,
     '#group' => 'jquery_update',
     '#description' => t('Modify how jQuery is loaded to increase download and render performance.')
@@ -153,7 +153,7 @@ function jquery_update_settings_form() {
     '#title' => t('jQuery Migrate'),
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
-    '#tree' => TRUE,
+    '#tree' => FALSE,
     '#group' => 'jquery_update',
     '#description' => t('<a href="!url">jQuery Migrate</a> can be used to detect and restore APIs or features that have been deprecated in jQuery and removed as of version 1.9 or higher.', array(
       '!url' => 'http://github.com/jquery/jquery-migrate/#readme',
