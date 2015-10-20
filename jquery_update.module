@@ -157,21 +157,11 @@ function jquery_update_library_alter(&$javascript, $module) {
       $javascript['jquery.form']['js']['misc/jquery.form.js']['data'] = $path . '/replace/jquery.form/2/jquery.form' . $min . '.js';
       $javascript['jquery.form']['version'] = '2.69';
     }
-
-    // Replace files for Jquery 1.9 and up
-    // @todo Figure out if this is needed if jQuery Migrate is enabled.
-    if (version_compare($version, '1.9', '>=')) {
-      $javascript['jquery.bbq']['js']['misc/jquery.ba-bbq.js']['data'] = $path . '/replace/misc/1.9/jquery.ba-bbq' . $min . '.js';
-    }
   }
 
   if (version_compare($version, '1.9', '>=')) {
     if ($module === 'jquery_update') {
       jquery_update_jquery_migrate_replace($javascript, $path, $min);
-    }
-    // @todo Figure out if this is needed if jQuery Migrate is enabled.
-    if ($module == 'overlay') {
-      $javascript['parent']['js']['modules/overlay/overlay-parent.js']['data'] = $path . '/replace/misc/1.9/overlay-parent.js';
     }
   }
 }
