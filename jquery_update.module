@@ -215,7 +215,7 @@ function jquery_update_get_versions() {
   static $drupal_static_fast;
   if (!isset($drupal_static_fast)) {
     $drupal_static_fast['versions'] = &drupal_static(__FUNCTION__, drupal_map_assoc(array(
-      '1.5', '1.7', '1.8', '1.9', '1.10', '1.11', '2.1'
+      '1.5', '1.7', '1.8', '1.9', '1.10', '1.11', '1.12', '2.1'
     )));
   }
   return $drupal_static_fast['versions'];
@@ -289,6 +289,10 @@ function jquery_update_jquery_replace(&$javascript, $cdn, $path, $min, $version)
 
     case '1.11':
       $trueversion = '1.11.2';
+      break;
+
+    case '1.12':
+      $trueversion = '1.12.4';
       break;
 
     case '2.1':
