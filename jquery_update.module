@@ -91,7 +91,7 @@ function jquery_update_library_alter(&$javascript, $module) {
   // If the ajax version is set then that one always win.
   if (!empty($_POST['ajax_page_state']['jquery_version'])) {
     $ajax_version = $_POST['ajax_page_state']['jquery_version'];
-    if (in_array($ajax_version, array('default', '1.5', '1.6', '1.7', '1.8', '1.9', '1.10'))) {
+    if (in_array($ajax_version, array('default') + jquery_update_get_versions())) {
       $version = $ajax_version;
     }
   }
@@ -215,7 +215,7 @@ function jquery_update_get_versions() {
   static $drupal_static_fast;
   if (!isset($drupal_static_fast)) {
     $drupal_static_fast['versions'] = &drupal_static(__FUNCTION__, drupal_map_assoc(array(
-      '1.5', '1.7', '1.8', '1.9', '1.10', '1.11', '1.12', '2.1'
+      '1.5', '1.6', '1.7', '1.8', '1.9', '1.10', '1.11', '1.12', '2.1'
     )));
   }
   return $drupal_static_fast['versions'];
