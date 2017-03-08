@@ -277,6 +277,10 @@ function jquery_update_jquery_replace(&$javascript, $cdn, $path, $min, $version)
       $trueversion = '1.5.2';
       break;
 
+    case '1.6':
+      $trueversion = '1.6.4';
+      break;
+
     case '1.7':
       $trueversion = '1.7.2';
       break;
