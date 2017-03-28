@@ -132,20 +132,17 @@ function jquery_update_library_alter(&$libraries, $module) {
   $libraries['cookie']['version'] = '67fb34f6a866c40d0570';
 
   // Replace jQuery Form Plugin.
-  if (version_compare($version, '1.7', '>=')) {
-    $libraries['jquery.form']['js']['misc/jquery.form.js']['data'] = $path . '/replace/jquery.form/4/jquery.form' . $min . '.js';
-    $libraries['jquery.form']['version'] = '4.0.1';
-  }
+  //
   // Even though jQuery Form (3.x) says it's compatible with jQuery >= 1.5,
   // it unfortunately has parsing issues when used with Drupal and jQuery 1.5.
   // @see https://www.drupal.org/node/2604976
-  elseif (version_compare($version, '1.6', '>=')) {
-    $libraries['jquery.form']['js']['misc/jquery.form.js']['data'] = $path . '/replace/jquery.form/3/jquery.form' . $min . '.js';
-    $libraries['jquery.form']['version'] = '3.51.0';
+  if (version_compare($version, '1.6', '>=')) {
+    $javascript['jquery.form']['js']['misc/jquery.form.js']['data'] = $path . '/replace/jquery.form/3/jquery.form' . $min . '.js';
+    $javascript['jquery.form']['version'] = '3.51.0';
   }
   else {
-    $libraries['jquery.form']['js']['misc/jquery.form.js']['data'] = $path . '/replace/jquery.form/2/jquery.form' . $min . '.js';
-    $libraries['jquery.form']['version'] = '2.69';
+    $javascript['jquery.form']['js']['misc/jquery.form.js']['data'] = $path . '/replace/jquery.form/2/jquery.form' . $min . '.js';
+    $javascript['jquery.form']['version'] = '2.69';
   }
 
   // Add jQuery.migrate plugin, if needed.
